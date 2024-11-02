@@ -6,6 +6,18 @@ Star
 * * *
 * * * *
 
+Alphabet Pattern 1
+A
+B B
+C C C
+D D D D
+
+Alphabet Pattern 2 (Reverse Triangle Pattern)
+A
+B A
+C B A
+D C B A
+
 Number Pattern 1
 1
 2 2
@@ -18,11 +30,17 @@ Number Pattern 2
 1 2 3
 1 2 3 4
 
-Alphabet
-A
-B B
-C C C
-D D D D
+Number Pattern 3 (Floyd's Triangle Pattern)
+1
+2 3
+4 5 6
+7 8 9 10
+
+Number Pattern 4 (Reverse Triangle Pattern)
+1
+2 1
+3 2 1
+4 3 2 1
 
 */
 #include <iostream>
@@ -37,6 +55,29 @@ int main()
         for (int j = 0; j <= i; j++) // OR for (int j = 0; j < i+1; j++)
         {
             cout << "* ";
+        }
+        cout << "\n";
+    }
+
+    cout << "\nAlphabet Pattern 1 \n";
+    char ch = 'A';
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++) // OR for (int j = 0; j < i+1; j++)
+        {
+            cout << ch << " ";
+        }
+        cout << "\n";
+        ch++;
+    }
+
+    cout << "\nAlphabet Pattern 2 (Reverse Triangle Pattern)\n";
+    ch = 'A';
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i; j >= 0; j--) // Backward loop
+        {
+            cout << (char)(ch + j) << " "; // Typecasting to char, or else it will print ASCII Value of alphabet
         }
         cout << "\n";
     }
@@ -61,16 +102,27 @@ int main()
         cout << "\n";
     }
 
-    cout << "\nAlphabet \n";
-    char ch = 'A';
+    cout << "\nNumber Pattern 3 (Floyd's Triangle Pattern)\n";
+    int num = 1;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <= i; j++) // OR for (int j = 0; j < i+1; j++)
         {
-            cout << ch << " ";
+            cout << num << " ";
+            num++;
         }
         cout << "\n";
-        ch++;
     }
+
+    cout << "\nNumber Pattern 4 (Reverse Triangle Pattern) \n";
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j > 0; j--) // Backward loop
+        {
+            cout << j << " ";
+        }
+        cout << "\n";
+    }
+
     return 0;
 }
