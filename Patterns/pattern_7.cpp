@@ -1,4 +1,4 @@
-/* 
+/*
 Butterfly Pattern
 
 *      *
@@ -28,41 +28,41 @@ using namespace std;
 
 int main()
 {
-    int n=4;
+    int n = 4;
     // Top Pattern
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        for(int j=0;j<i+1;j++) // Printing star
+        for (int j = 0; j < i + 1; j++) // Printing star
         {
-            cout<<"*";
+            cout << "*";
         }
-        for(int s=0;s<2*(n-i-1);s++) // Printing spaces
+        for (int s = 0; s < 2 * (n - i - 1); s++) // Printing spaces
         {
-            cout<<" ";
+            cout << " ";
         }
-        for(int j=0;j<i+1;j++) // Printing star
+        for (int j = 0; j < i + 1; j++) // Printing star
         {
-            cout<<"*";
+            cout << "*";
         }
-        cout<<"\n";
+        cout << "\n";
     }
 
     // Bottom Pattern
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
-        for(int j=0;j<n-i;j++) // Printing star
+        for (int j = 0; j < n - i; j++) // Printing star
         {
-            cout<<"*";
+            cout << "*";
         }
-        for(int s=0;s<2*i;s++) // Printing spaces
+        for (int s = 0; s < 2 * i; s++) // Printing spaces
         {
-            cout<<" ";
+            cout << " ";
         }
-        for(int j=0;j<n-i;j++) // Printing star
+        for (int j = 0; j < n - i; j++) // Printing star
         {
-            cout<<"*";
+            cout << "*";
         }
-        cout<<"\n";
+        cout << "\n";
     }
     return 0;
 }
